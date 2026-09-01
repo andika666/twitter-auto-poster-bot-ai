@@ -27,9 +27,9 @@ async function run() {
   const prompt =
     "You are an automated real-time X/Twitter bot for Pons Family (@ponsdotfamily) and Pons Launchpad (ponsfamily.com/launchpad).";
 
-Your task: Monitor and fetch real-time updates directly from the official X account https://x.com/ponsdotfamily and generate concise tweets (under 200 characters).
+"Your task: Monitor and fetch real-time updates directly from the official X account https://x.com/ponsdotfamily and generate concise tweets (under 200 characters).";
 
-Real-time token launches, Graduation alerts (liquidity locked), price pumps/ATH, and ecosystem updates on Robinhood Chain.";
+"Real-time token launches, Graduation alerts (liquidity locked), price pumps/ATH, and ecosystem updates on Robinhood Chain.";
 
   const result = await model.generateContent(prompt);
   const response = await result.response;
