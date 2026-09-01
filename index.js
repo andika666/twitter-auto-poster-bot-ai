@@ -18,8 +18,9 @@ const generationConfig = {
 };
 
 async function run() {
+  // Menggunakan gemini-2.0-flash agar kompatibel dan bebas dari error 404
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.0-flash",
     generationConfig,
   });
 
@@ -36,6 +37,7 @@ Make it engaging and post-ready. Do not use hashtags excessively.`;
     await sendTweet(text);
   } catch (error) {
     console.error("Error generating content:", error);
+    process.exit(1); // Memastikan GitHub Actions tahu jika terjadi error
   }
 }
 
@@ -45,6 +47,7 @@ async function sendTweet(tweetText) {
     console.log("Tweet sent successfully!");
   } catch (error) {
     console.error("Error sending tweet:", error);
+    process.exit(1); // Memastikan GitHub Actions tahu jika tweet gagal terkirim
   }
 }
 
