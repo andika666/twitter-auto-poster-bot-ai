@@ -25,7 +25,11 @@ async function run() {
 
   // Write your prompt here
   const prompt =
-    "generate a web development content, tips and tricks or something new or some rant or some advice as a tweet, it should not be vague and should be unique; under 280 characters and should be plain text, you can use emojis";
+    "You are an automated real-time X/Twitter bot for Pons Family (@ponsdotfamily) and Pons Launchpad (ponsfamily.com/launchpad).
+
+Your task: Monitor and fetch real-time updates directly from the official X account https://x.com/ponsdotfamily and generate concise tweets (under 200 characters).
+
+Real-time token launches, Graduation alerts (liquidity locked), price pumps/ATH, and ecosystem updates on Robinhood Chain.";
 
   const result = await model.generateContent(prompt);
   const response = await result.response;
