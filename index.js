@@ -5,16 +5,17 @@ const { TwitterApi } = require("twitter-api-v2");
 const SECRETS = require("./SECRETS");
 
 const twitterClient = new TwitterApi({
-  appKey: SECRETS.APP_KEY,
-  appSecret: SECRETS.APP_SECRET,
-  accessToken: SECRETS.ACCESS_TOKEN,
-  accessSecret: SECRETS.ACCESS_SECRET,
+  appKey: SECRETS.FCGysjPxxAJfWvAijCT6gSoOk,
+  appSecret: SECRETS.upmrYT9BqATsqlfUHtK5GSsFMCWuwfpYG0quOM8raQyUsFv8Sh,
+  accessToken: SECRETS.2094661946960171008-TRQ5tgYeDOxAvPiak0m8D2D2jro7W1,
+  accessSecret: SECRETS.QmIOhX7W0da8TjUNT5kiBUXhVULLYqbj8kQeX8NYBisf2,
 });
 
 const generationConfig = {
   maxOutputTokens: 400,
 };
-const genAI = new GenAI.GoogleGenerativeAI(SECRETS.GEMINI_API_KEY);
+const genAI = new GenAI.GoogleGenerativeAI(SECRETS.AQ.Ab8RN6J8oLbko3ukgUZnFC6gnaFvbB9wB7g5uU9uYX6j3CLsiA
+);
 
 async function run() {
   // For text-only input, use the gemini-pro model
